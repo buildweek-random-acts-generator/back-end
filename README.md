@@ -1,5 +1,9 @@
 # Back-end
 
+# ARK
+
+Inspiring yourself can be a chore let ARK help you be your best self. 
+
 
 # Proposal
 
@@ -14,7 +18,7 @@ Our mission is to connect people one random act of kindness at a time. We strive
 
 
 
-# Features
+## Features
 
  What features are required for your minimum viable product?
 - Navigation on all pages
@@ -51,7 +55,7 @@ Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
 - N/A
 
 
-# Target Audience
+## Target Audience
 
  Who is your target audience? Be specific.
 - 	Busy young professionals
@@ -65,7 +69,7 @@ Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
 -      Some validation has occurred through sending out surveys.  Also some user testing has occurred through showing our user group a prototype for onboarding, adding contacts, and adding service ideas.  So far, the users have successfully completed the tasks and further testing will occur. 
 
 
-# Research
+## Research
 
  Research thoroughly before writing a single line of code. Solidify the features of your app conceptually before implementation. Spend the weekend researching so you can hit the ground running on Monday.
 
