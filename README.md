@@ -4,6 +4,59 @@
 
 Inspiring yourself can be a chore let ARK help you be your best self. 
 
+## Overview
+This API is used as part of the application _ARK Project_ and allows for CRUD operations to be preformed on the users _contacts_ and _actions_. 
+
+This documentation will cover all of the data models and endpoints which can be access via
+> <https://random-ark-generator.herokuapp.com/>
+
+# Endpoints
+
+## Authentication
+
+| Request Type | Endpoint      | Description   |
+|:------------:|:-------------:|:-------------:|
+| POST         | /register | Creates User  |
+| POST         | /login    | Creates JWT*  |
+
+* JSON Web Tokens Used to Verify Users
+
+## Authentication
+
+### Register
+
+* A __POST__ request to the `/register` endpoint expects to recieve an object as follows: 
+
+```javascript
+{
+    "email": "email@address.com",
+    "password": "password"
+}
+```
+
+| Field        | Type      | Required   | Unique     |
+|:------------:|:---------:|:----------:|:----------:|
+| email        | String    |  true      | true       |
+| password     | String    |  true      | false      |
+
+### Login
+
+* A __POST__ request to the `/login` endpoint expects to recieve an object as follows: 
+
+```javascript
+{
+    "email": "email",
+    "password": "password",
+}
+```
+
+| Field        | Type      | Required   | Unique     |
+|:------------:|:---------:|:----------:|:----------:|
+| email        | String    |  true      | true       |
+| password     | String    |  true      | false      |
+
+* The __POST__ request to `/login` will return a jwt and a login message.
+
 
 # Proposal
 
