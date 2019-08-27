@@ -16,8 +16,8 @@ This documentation will cover all of the data models and endpoints which can be 
 
 | Request Type | Endpoint      | Description   |
 |:------------:|:-------------:|:-------------:|
-| POST         | /register | Creates User  |
-| POST         | /login    | Creates JWT*  |
+| POST         | /auth/register | Creates User  |
+| POST         | /auth/login    | Creates JWT*  |
 
 * JSON Web Tokens Used to Verify Users
 
