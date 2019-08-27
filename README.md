@@ -8,20 +8,18 @@ Inspiring yourself can be a chore let ARK help you be your best self.
 This API is used as part of the application _ARK Project_ and allows for CRUD operations to be preformed on the users _contacts_ and _actions_. 
 
 This documentation will cover all of the data models and endpoints which can be access via
-> <https://random-ark-generator.herokuapp.com/>
+> <https://random-ark-generator.herokuapp.com/api/>
 
 # Endpoints
 
 ## Authentication
 
-| Request Type | Endpoint      | Description   |
-|:------------:|:-------------:|:-------------:|
+| Request Type | Endpoint       | Description   |
+|:------------:|:--------------:|:-------------:|
 | POST         | /auth/register | Creates User  |
 | POST         | /auth/login    | Creates JWT*  |
 
 * JSON Web Tokens Used to Verify Users
-
-## Authentication
 
 ### Register
 
@@ -57,6 +55,14 @@ This documentation will cover all of the data models and endpoints which can be 
 
 * The __POST__ request to `/login` will return a jwt and a login message.
 
+## Arks
+
+| Request Type | Endpoint | Description |
+|:------------:|:--------:|:-----------:|
+| GET          | /arks/   | Gets ARKS|
+| POST         | /arks/   | Posts a ARK|
+| PUT          | /arks/:id| Updates ARKS by ID|
+| DELETE       | /arks/:id| Deletes ARKS by ID|
 
 # Proposal
 

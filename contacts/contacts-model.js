@@ -1,18 +1,15 @@
 const db = require('../database/dbConfig');
 
 module.exports = {
-    getArks,
-    getUserArks,
-    postArk,
-    updateArk,
-    removeArk
+    getUserContacts,
+    postContact,
+    updateContact,
+    removeContact
 }
 
-function getArks() {
-    return db('arks')
-}
 
-function getUserArks(user_id)  {
+
+function getUserContacts(user_id)  {
     return db('arks')
      .innerJoin('users', 'ark.user_id', '=', 'users.id')
      .where({ user_id })

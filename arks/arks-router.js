@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
 
 
 router.post('/', restricted, (req, res) => {
-    console.log(req.body)
     const arkData = req.body;
     Ark.postArk(arkData)
     .then(arks => {
@@ -25,5 +24,28 @@ router.post('/', restricted, (req, res) => {
     });
 });
 
+
+router.put('/:id', restricted, (req, res) => {
+    const id = req.params.id;
+    const changes = req.body;
+    console.log(changes)
+    Ark.updateArk(id, changes)
+    .then(ark => {
+        res.status(200).json({message: `Ark ${id} updated!`})
+    }).catch((err) => {
+        res.status(500).json({message:'Error Updating Ark'})
+    });
+});
+
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    Ark.removeArk(id)
+        .then(ark => {
+            res.status(204).json({message:`Ark ${id} Deleted!`})
+        }).catch((err) => {
+            res.status(500).json({message:'Error Deleting Ark'})
+        });
+});
 
 module.exports = router;
