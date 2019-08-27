@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
       if (err) {
         res.status(401).json({ you: 'shall not pass!'});
       }else {
-        req.user = {username: decodedToken.username};
+        req.user = decodedToken;
         next()
       }
     });

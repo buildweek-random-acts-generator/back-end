@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const authRouter = require('../auth/auth-router');
 const arksRouter = require('../arks/arks-router');
+const contactsRouter = require('../contacts/contacts-router');
 
 
 
@@ -15,6 +16,7 @@ server.use(cors());
 
 server.use('/api/auth', authRouter);
 server.use('/api/arks', arksRouter);
+server.use('/api/contacts', contactsRouter);
 
 server.get('/', (req, res) => {
     res.send("It's alive")

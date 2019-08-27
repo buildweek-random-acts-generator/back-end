@@ -16,6 +16,8 @@ router.get('/', (req, res) => {
 
 router.post('/', restricted, (req, res) => {
     const arkData = req.body;
+    const userId = req.user.subject
+    arkData.user_id = userId;
     Ark.postArk(arkData)
     .then(arks => {
         res.status(200).json(arks)
@@ -38,7 +40,7 @@ router.put('/:id', restricted, (req, res) => {
 });
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', restricted,(req, res) => {
     const id = req.params.id;
     Ark.removeArk(id)
         .then(ark => {
