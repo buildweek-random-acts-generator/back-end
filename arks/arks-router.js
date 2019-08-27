@@ -38,7 +38,7 @@ router.put('/:id', restricted, (req, res) => {
 });
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', restricted,(req, res) => {
     const id = req.params.id;
     Ark.removeArk(id)
         .then(ark => {

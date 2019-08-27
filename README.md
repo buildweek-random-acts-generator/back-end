@@ -64,6 +64,21 @@ This documentation will cover all of the data models and endpoints which can be 
 | PUT          | /arks/:id| Updates ARKS by ID|
 | DELETE       | /arks/:id| Deletes ARKS by ID|
 
+
+### Ark Request
+* A __POST__ request to the `/arks/` endpoint expects to receive an object as follows: 
+
+```javascript
+{
+    "ark": "ark description",
+    "user_id": "password"
+}
+```
+
+| Field        | Type      | Required   | Unique     |
+|:------------:|:---------:|:----------:|:----------:|
+| ark        | String    |  true      | true       |
+| user_id    | integer    |  false     | false      |
 # Proposal
 
  What problem does your app solve?

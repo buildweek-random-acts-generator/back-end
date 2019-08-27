@@ -10,20 +10,20 @@ module.exports = {
 
 
 function getUserContacts(user_id)  {
-    return db('arks')
-     .innerJoin('users', 'ark.user_id', '=', 'users.id')
+    return db('contacts')
+     .innerJoin('users', 'contacts.user_id', '=', 'users.id')
      .where({ user_id })
 }
-function postArk(ark) {
-    return db('arks').insert(ark);
+function postContact(contact) {
+    return db('contacts').insert(contact);
 }
-function updateArk(id, changes) {
-    return db('arks')
+function updateContact(id, changes) {
+    return db('contacts')
         .where({ id })
         .update(changes);
 }
-function removeArk(id) {
-    return db('arks')
+function removeContact(id) {
+    return db('contacts')
         .where('id', id)
         .del();
 }
