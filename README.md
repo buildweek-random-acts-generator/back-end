@@ -79,6 +79,30 @@ This documentation will cover all of the data models and endpoints which can be 
 |:------------:|:---------:|:----------:|:----------:|
 | ark        | String    |  true      | true       |
 | user_id    | integer    |  false     | false      |
+
+## Contacts
+
+| Request Type | Endpoint | Description |
+|:------------:|:--------:|:-----------:|
+| GET          | /contacts/:user_id   | Gets contacts by user_id|
+| POST         | /contacts/   | Posts a Contact with built in user_id!|
+| PUT          | /contacts/:id| Updates contacts by ID|
+| DELETE       | /contacts/:id| Deletes contacts by ID|
+
+### Contact Request
+* A __POST__ request to the `/contacts/` endpoint expects to receive an object as follows:
+
+```javascript
+{
+    "name": "Contact Name",
+    "info": "Contact Info"
+}
+```
+
+| Field        | Type      | Required   | Unique     |
+|:------------:|:---------:|:----------:|:----------:|
+| name       | String    |  true      | true       |
+| info    | String    |  false     | false      |
 # Proposal
 
  What problem does your app solve?

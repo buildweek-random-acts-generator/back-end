@@ -16,6 +16,8 @@ router.get('/', (req, res) => {
 
 router.post('/', restricted, (req, res) => {
     const arkData = req.body;
+    const userId = req.user.subject
+    arkData.user_id = userId;
     Ark.postArk(arkData)
     .then(arks => {
         res.status(200).json(arks)
