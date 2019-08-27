@@ -8,7 +8,7 @@ Inspiring yourself can be a chore let ARK help you be your best self.
 This API is used as part of the application _ARK Project_ and allows for CRUD operations to be preformed on the users _contacts_ and _actions_. 
 
 This documentation will cover all of the data models and endpoints which can be access via
-> <https://random-ark-generator.herokuapp.com/>
+> <https://random-ark-generator.herokuapp.com/api/>
 
 # Endpoints
 
