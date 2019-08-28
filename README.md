@@ -96,8 +96,10 @@ This documentation will cover all of the data models and endpoints which can be 
 
 ```javascript
 {
-    "name": "Contact Name",
-    "info": "Contact Info"
+    "first_name": "Contact First Name",
+    "last_name": "Contact Last Name",
+    "email":"Contact Email",
+    "phone":"Contact Phone Number"
 }
 ```
 
