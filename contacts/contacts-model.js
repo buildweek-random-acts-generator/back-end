@@ -12,7 +12,7 @@ module.exports = {
 function getUserContacts(user_id)  {
     return db('contacts')
      .innerJoin('users', 'contacts.user_id', '=', 'users.id')
-     .select('contacts.id', 'contacts.name','contacts.info')
+     .select('contacts.id', 'contacts.first_name','contacts.last_name','contacts.phone', 'contacts.email')
      .where({ user_id })
 }
 function postContact(contact) {
