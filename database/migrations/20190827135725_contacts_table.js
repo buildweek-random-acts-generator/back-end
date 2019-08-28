@@ -4,10 +4,14 @@ exports.up = function(knex) {
     .createTable('contacts', tbl => {
         tbl.increments();
         tbl
-            .string('name', 255)
+            .string('first_name', 255)
             .notNullable();
         tbl
-            .string('info', 255);
+            .string('last_name', 255);
+        tbl
+            .string('email', 255);
+        tbl
+            .string('phone', 255);
         tbl
             .integer('user_id')
             .unsigned()

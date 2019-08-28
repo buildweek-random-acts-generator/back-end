@@ -14,6 +14,19 @@ router.get('/', (req, res) => {
 });
 
 
+router.get('/random', restricted, (req, res) => {
+    const userId = req.user.subject
+    Ark.getArks()
+    
+    .then((arks) => {
+        const random = arks[Math.floor(Math.random()*arks.length)];
+        res.status(200).json(random)
+    }).catch((err) => {
+        res.status(500).json({message:'Arks not found'})
+    });
+});
+
+
 router.post('/', restricted, (req, res) => {
     const arkData = req.body;
     const userId = req.user.subject
