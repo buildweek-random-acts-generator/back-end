@@ -14,6 +14,9 @@ router.get('/', (req, res) => {
 });
 
 
+router.get('/rando', (req, res) => {});
+
+
 router.get('/random', restricted, (req, res) => {
     const userId = req.user.subject
     Ark.getArks()    
