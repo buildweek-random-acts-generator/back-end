@@ -185,3 +185,6 @@ Prototype Key Feature(s)
 - Ideas List - Wednesday
 - Idea Generator Page - Thursday
 - User onboarding (Login, Sign-up) - Wednesday/Thursday
+
+
+Random Stuff to commit

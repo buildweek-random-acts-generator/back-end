@@ -1,10 +1,10 @@
+require('dotenv').config()
+
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     useNullAsDefault: true,
-    connection: {
-      filename: './database/ARK.db3',
-    },
+    connection: process.env.DB_URL,
     pool: {
       afterCreate: (conn, done) => {
         conn.run('PRAGMA foreign_keys = ON', done);
