@@ -42,7 +42,7 @@ function getJwt(user) {
     const payload = {
       subject:user.id,
       email: user.email,
-      jwtid: 1,
+      jwtid: 1
     };
     const options = {
       expiresIn: '8h',
