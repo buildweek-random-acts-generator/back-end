@@ -41,6 +41,7 @@ router.post('/login', (req, res) => {
 
 
 function getJwt(user) {
+    clg("TokenGet", user)
     const payload = {
       subject:user.id,
       email: user.email,
