@@ -27,6 +27,7 @@ router.get('/:user_id/random', restricted, (req, res) => {
 
 
 router.post('/', restricted,(req, res) => {
+    console.log(req.body);
     const contactData = req.body;
     const userId = req.user.subject
     contactData.user_id = userId;
