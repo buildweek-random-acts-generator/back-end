@@ -45,8 +45,7 @@ function getJwt(user) {
     clg("TokenGet", user)
     const payload = {
       subject:user.id,
-      email: user.email,
-      jwtid: 1
+      email: user.email
     };
     const options = {
       expiresIn: '8h',
