@@ -42,7 +42,7 @@ router.post('/login', (req, res) => {
 
 
 function getJwt(user) {
-    clg("TokenGet", user)
+    console.log("TokenGet", user)
     const payload = {
       subject:user.id,
       email: user.email
