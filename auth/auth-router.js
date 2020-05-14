@@ -18,11 +18,13 @@ router.post('/register', (req, res) => {
     });
 });
 router.post('/login', (req, res) => {
+    console.log("body",req.body);
     let { email, password } = req.body;
 
     Users.findBy({ email })
         .first()
         .then(user => {
+            console.log("Return", user);
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = getJwt(user);
                 console.log(user.id);
