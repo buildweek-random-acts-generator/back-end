@@ -30,6 +30,7 @@ router.get('/random', restricted, (req, res) => {
 
 
 router.post('/', restricted, (req, res) => {
+    console.log(req.body);
     const arkData = req.body;
     const userId = req.user.subject
     arkData.user_id = userId;
