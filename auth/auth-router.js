@@ -26,6 +26,7 @@ router.post('/login', (req, res) => {
         .then(user => {
             console.log("Return", user);
             if (user && bcrypt.compareSync(password, user.password)) {
+                console.log("this");
                 const token = getJwt(user);
                 console.log(user.id);
                 let id = user.id
