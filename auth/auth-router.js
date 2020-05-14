@@ -18,16 +18,13 @@ router.post('/register', (req, res) => {
     });
 });
 router.post('/login', (req, res) => {
-    console.log("body",req.body);
     let { email, password } = req.body;
 
     Users.findBy({ email })
         .first()
         .then(user => {
-            console.log("Return", user);
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = getJwt(user);
-                console.log("this",token);
                 console.log(user.id);
                 let id = user.id
                 res.status(200).json({message: `Welcome ${user.email}!`, token, id});
@@ -42,7 +39,6 @@ router.post('/login', (req, res) => {
 
 
 function getJwt(user) {
-    console.log("TokenGet", user)
     const payload = {
       subject:user.id,
       email: user.email
